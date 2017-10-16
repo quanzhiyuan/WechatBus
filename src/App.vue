@@ -1,24 +1,27 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <w-header></w-header>
     <router-view/>
   </div>
 </template>
 
 <script>
+import wHeader from './components/header'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {wHeader}
 }
 </script>
 
 <style lang="scss">
-@import "./scss/index.scss";
+@import './scss/index';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: $backgroundColor;
+  width: 3.75rem;
 }
 </style>

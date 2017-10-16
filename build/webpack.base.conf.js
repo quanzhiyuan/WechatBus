@@ -3,7 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-
+const copyWebpackPlugin = require('copy-webpack-plugin')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
@@ -72,5 +72,19 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new copyWebpackPlugin([
+      {
+       from:'./src/img/',
+       to:'./static/img/',
+       toType:'dir'
+       },
+       {
+        from:'./src/scss/helpers',
+        to:'./static/css/',
+        toType:'dir'
+       }
+    ])
+  ]
 }
