@@ -1,0 +1,3 @@
+goPage: function (url) {
+  
+}

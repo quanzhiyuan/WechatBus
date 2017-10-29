@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <img class="menu" src="/static/img/header-left.png"/>
-    <div>{{title}}</div>
+    <div><router-link :to="{ name: '/'}">{{title}}</router-link></div>
     <img class="search" src="/static/img/search.png" />
   </div>
 </template>

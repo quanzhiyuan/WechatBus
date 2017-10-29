@@ -1,0 +1,28 @@
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.text-hidden{
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  overflow:hidden;
+}
+* {
+  box-sizing: border-box;
+}
+
+.horizontal-view{
+  display: flex;
+  flex-direction: row;
+}
+.vertical-view {
+  display: flex;
+  flex-direction: column;
+}

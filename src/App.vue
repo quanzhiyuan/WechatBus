@@ -23,5 +23,6 @@ export default {
   color: #2c3e50;
   background-color: $backgroundColor;
   width: 3.75rem;
+  min-height: 6.67rem;
 }
 </style>
